@@ -36,6 +36,11 @@ namespace TestPlugin
             //Svc.Framework.Update += OnUpdate;
             Svc.PluginInterface.UiBuilder.Draw += Draw;
             Svc.GameNetwork.NetworkMessage += Message;
+            Svc.Chat.PrintChat(new()
+            {
+                Type = Dalamud.Game.Text.XivChatType.Ls8,
+                Message = $"Initialized"
+            });
             //Module.Initialize();
         }
 
